@@ -1,3 +1,78 @@
+# Expense Tracker
+
+A modern expense tracker built with Next.js, MongoDB, and Recharts. It lets you add expenses, view recent transactions, and see category-based spending in a clean dashboard.
+
+## Features
+
+- Add expenses with description, amount, category, and date
+- Store and read data from MongoDB Atlas
+- View recent transactions in a styled activity list
+- Visualize spending by category with a pie chart
+- Responsive dashboard layout for desktop and mobile
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- MongoDB and Mongoose
+- Recharts
+- Tailwind CSS 4
+
+## Getting Started
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create or update your environment file:
+
+```bash
+MONGODB_URI=your-mongodb-connection-string
+MONGODB_DB=expense-tracker
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000).
+
+## MongoDB Compass
+
+If you are using MongoDB Compass, create a database named `expense-tracker` and a collection named `expenses`.
+
+The app writes documents with the following shape:
+
+```json
+{
+	"description": "Groceries",
+	"amount": 45.5,
+	"category": "Food",
+	"date": "2026-06-01T12:00:00.000Z"
+}
+```
+
+## Scripts
+
+- `npm run dev` - start the development server
+- `npm run build` - build the app for production
+- `npm run start` - run the production build
+- `npm run lint` - run ESLint
+
+## Project Structure
+
+- `app/` - Next.js app router pages, layout, API routes, and global styles
+- `components/` - dashboard UI components
+- `lib/` - shared database connection helpers
+- `models/` - Mongoose schemas
+
+## Notes
+
+The app expects a valid MongoDB connection string in `.env.local`. If Compass shows system databases only, connect to your Atlas cluster and open the `expense-tracker` database, then refresh the `expenses` collection after adding a new item in the app.
 # ExpenseTracking
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
